@@ -86,7 +86,7 @@ public class UIBase : PoolingObjectBase
     /// <summary>
     /// 인덱스로 UI 가져오기.
     /// </summary>
-    protected T GetUI<T>(int idx) where T : UnityEngine.Component
+    protected T GetUI<T>(int idx = 0) where T : UnityEngine.Component
     {
         List<UnityEngine.Component> list = null;
         if (m_DicUIObjects.TryGetValue(typeof(T), out list))

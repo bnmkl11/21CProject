@@ -12,9 +12,12 @@ public class Common
 
     // 기획자가 있다면, XML, JSON 과 같은 자료를 불러와서 
     // 이러한 값들을 셋팅을 진행한다.
-    public const string kPATH_TITLE = "Prefabs/UI/Scene/UITitle";
-    public const string kPATH_LOBBY = "Prefabs/UI/Scene/UILobby";
-    public const string kPATH_LOADING = "Prefabs/UI/Scene/UILoading";
+    public const string kPREFAB_SCENE_TITLE = "Prefabs/UI/Scene/UITitle";
+    public const string kPREFAB_SCENE_LOBBY = "Prefabs/UI/Scene/UILobby";
+    public const string kPREFAB_SCENE_LOADING = "Prefabs/UI/Scene/UILoading";
+
+    public const string kPREFAB_COMMON_ITEM_SLOT = "Prefabs/UI/Common/UIItemSlot";
+
     public const int RANDOM_RARE_AVATA_PRICE = 0;
     public const int RANDOM_LEGEND_AVATA_PRICE = 0;
 

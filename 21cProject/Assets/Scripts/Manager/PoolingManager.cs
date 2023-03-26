@@ -104,6 +104,7 @@ public class PoolingManager : SingletonBase<PoolingManager>
             obj.transform.SetParent(parent);
             obj.transform.localPosition = pos;
             obj.transform.localRotation = quat;
+            obj.transform.localScale = Vector3.one;
             obj.SetDisposeCallback(onDiposeCallback);
 
             return obj;
