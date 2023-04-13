@@ -68,7 +68,7 @@ public enum kSCENE_UI_TYPE
     Dead,
     Victory,
     Loading,
-    Inventory,
+    InGame,
 }
 public enum kSCNENE_TYPE
 {
@@ -76,7 +76,8 @@ public enum kSCNENE_TYPE
     Loading,
     Main,
     Lobby,
-    Shop
+    Shop,
+    InGame
 }
 
 #region Sound
