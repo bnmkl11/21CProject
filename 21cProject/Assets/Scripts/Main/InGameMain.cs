@@ -9,5 +9,7 @@ public class InGameMain : SceneMain
         UIManager.Instance.Push<UIInGame>(Common.kPREFAB_SCENE_LOBBY);
         SoundManager.Instance.SetBGMVolume(0.5f);
         SoundManager.Instance.PlayBGM(kBGM.Lobby);
+
+        TableManager.Instance.GetData();
     }
 }
