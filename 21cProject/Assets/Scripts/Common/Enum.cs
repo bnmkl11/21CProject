@@ -60,16 +60,6 @@ public enum kCAMERA_TYPE
     end
 }
 
-public enum kSCENE_UI_TYPE
-{
-    None,
-    Title,
-    Lobby,
-    Dead,
-    Victory,
-    Loading,
-    InGame,
-}
 public enum kSCNENE_TYPE
 {
     None,

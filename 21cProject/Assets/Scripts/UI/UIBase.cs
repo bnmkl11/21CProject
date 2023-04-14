@@ -16,10 +16,6 @@ public class UIBase : PoolingObjectBase
     private bool m_IsMainScene;
     public bool IsMainScene{ get => m_IsMainScene; }
 
-    [SerializeField]
-    // ¾À UIÀÇ Å¸ÀÔ.
-    private kSCENE_UI_TYPE m_UIType;
-    public kSCENE_UI_TYPE UIType { get => m_UIType; }
 
     private int m_OrderLayer;
     public int OrderLayer { get => m_OrderLayer; }

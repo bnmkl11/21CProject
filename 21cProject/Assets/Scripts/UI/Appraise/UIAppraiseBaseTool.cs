@@ -21,7 +21,7 @@ public class UIAppraiseBaseTool : PoolingObjectBase
     
     #endregion
 
-    public virtual void Update(ToolData data)
+    public virtual void UpdateUI(ToolData data)
     {
         m_ToolData = data;
 
