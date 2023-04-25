@@ -17,6 +17,7 @@ public class Common
     public const string kPREFAB_SCENE_LOBBY = "Prefabs/UI/Scene/UILobby";
     public const string kPREFAB_SCENE_IN_GAME = "Prefabs/UI/Scene/UIInGame";
     public const string kPREFAB_SCENE_LOADING = "Prefabs/UI/Scene/UILoading";
+    public const string kPREFAB_POPUP_ALBUM     = "Prefabs/UI/Popup/UIAlbum";
 
     public const string kPREFAB_COMMON_ITEM_SLOT = "Prefabs/UI/Common/UIItemSlot";
 

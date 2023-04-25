@@ -113,6 +113,30 @@ public class UIManager : SingletonBase<UIManager>
     }
 
     /// <summary>
+    /// ¸ðµç UI º¸ÀÌ±â. (ÆÄ±« x).
+    /// </summary>
+    public void Show<T>() where T : UIBase
+    {
+        var ui = GetUI<T>();
+        if (ui != null)
+        {
+            ui.Show();
+        }
+    }
+
+    /// <summary>
+    /// ¸ðµç UI ¼û±â±â. (ÆÄ±« x).
+    /// </summary>
+    public void Hide<T>() where T : UIBase
+    {
+        var ui = GetUI<T>();
+        if (ui != null)
+        {
+            ui.Hide();
+        }
+    }
+
+    /// <summary>
     /// ¸ðµç UI ¼û±â±â. (ÆÄ±« x).
     /// </summary>
     public void AllHideUI()

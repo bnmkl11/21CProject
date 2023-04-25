@@ -26,6 +26,9 @@ public class UITitle : UIBase
         var buttonObject = GetButton("ButtonStart");
         buttonObject.onClick.AddListener(OnTouchStart);
 
+        buttonObject = GetButton("ButtonAlbum");
+        buttonObject.onClick.AddListener(OnTouchAlbum);
+
         StartCoroutine(StartLightCorotine());
         StartCoroutine(StartLightCorotine2());
     }
@@ -54,7 +57,12 @@ public class UITitle : UIBase
 
     public void OnTouchStart()
     {
-        SceneChanger.Instance.LoadScene(kSCNENE_TYPE.Lobby);
+        SceneChanger.Instance.LoadScene(kSCNENE_TYPE.InGame);
+    }
+
+    public void OnTouchAlbum()
+    {
+        UIManager.Instance.Push<UIAlbum>(Common.kPREFAB_POPUP_ALBUM);
     }
 
 }
