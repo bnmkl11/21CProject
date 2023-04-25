@@ -19,6 +19,10 @@ public class Common
     public const string kPREFAB_SCENE_LOADING = "Prefabs/UI/Scene/UILoading";
     public const string kPREFAB_POPUP_ALBUM     = "Prefabs/UI/Popup/UIAlbum";
 
+    public const string kPREFAB_INGAME_NPC = "Prefabs/UI/Appraise/UINpc";
+    public const string kPREFAB_INGAME_APPRAISETOOL = "Prefabs/UI/Appraise/UIAppraiseTool";
+    public const string kPREFAB_APPRAISE_PROFILEPOPUP = "Prefabs/UI/Appraise/UIProfilePopup";
+    
     public const string kPREFAB_COMMON_ITEM_SLOT = "Prefabs/UI/Common/UIItemSlot";
 
     public const int RANDOM_RARE_AVATA_PRICE = 0;

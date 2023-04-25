@@ -6,11 +6,7 @@ using UnityEngine.UI;
 
 public class UIInGame : UIBase
 {
-    private ScrollRect m_ScrollRect;
-
-    private GridLayoutGroup m_Grid;
-
-    private List<UIItemSlot> m_ListOfItemSlot = new List<UIItemSlot>();
+    #region Override
 
     public override void Initialize()
     {
@@ -19,33 +15,27 @@ public class UIInGame : UIBase
         BindUI<GridLayoutGroup>(gameObject);
         BindUI<ScrollRect>(gameObject);
 
-        m_ScrollRect    = GetUI<ScrollRect>();
-        m_Grid          = GetUI<GridLayoutGroup>();
-
-        PoolingManager.Instance.CreatePool<UIItemSlot>(Common.kPREFAB_COMMON_ITEM_SLOT);
-
-        for (int i = 0; i< 50; i++)
-        {
-            var slot = PoolingManager.Instance.Pop<UIItemSlot>(m_Grid.transform);
-            slot.Show();
-            slot.UpdateUI(1, i);
-            m_ListOfItemSlot.Add(slot);
-        }
-
-      
+        InitPool();
     }
 
+    #endregion
 
+    #region Init
 
+    private void InitPool()
+    {
+        PoolingManager.Instance.CreatePool<UIAppraiseBaseTool>(Common.kPREFAB_INGAME_APPRAISETOOL);
+        PoolingManager.Instance.CreatePool<UIAppraiseBaseTool>(Common.kPREFAB_INGAME_NPC);
+    }
 
+    #endregion
+
+    #region OnTouch
+    
     public void OnTouchStart()
     {
-
-        m_Grid.CalculateLayoutInputHorizontal();
-
-        m_Grid.CalculateLayoutInputVertical();
-
-        m_ScrollRect.SetPosition(m_ListOfItemSlot[23].transform);
+        
     }
 
+    #endregion
 }

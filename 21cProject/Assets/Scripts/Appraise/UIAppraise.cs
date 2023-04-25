@@ -18,8 +18,6 @@ public class UIAppraise : UIBase
     public override void Initialize()
     {
         base.Initialize();
-        
-        // PoolingManager.Instance.CreatePool<UIAppraiseBaseTool>();
     }
 
     #endregion
