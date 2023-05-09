@@ -30,13 +30,13 @@ public class UIAppraise : UIBase
     }
 
     #endregion
-    
+
     #region Update
 
     public void UpdateState(AppraisePhaseState state)
     {
         m_CurrentAppraisingState = state;
-    
+
         switch (state)
         {
             case AppraisePhaseState.AppraisingStart:
@@ -51,6 +51,15 @@ public class UIAppraise : UIBase
     public void UpdateAppraiseTool(ToolData.kTOOL_TYPE toolType)
     {
         m_CurrentTool = toolType;
+    }
+
+    #endregion
+
+    #region Func
+
+    public ToolData.kTOOL_TYPE GetCurrentTool()
+    { 
+        return m_CurrentTool; 
     }
 
     #endregion
