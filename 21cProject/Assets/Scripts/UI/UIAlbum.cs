@@ -72,7 +72,7 @@ public class UIAlbum : UIBase
         Common.DisposeList(m_ListOfAlbumSlot);
         Common.DisposeList(m_ListOfPictureSlot);
 
-        for (int i = 0; i < 2; i++)
+        for (int i = 1; i <= 2; i++)
         {
             var slot = PoolingManager.Instance.Pop<UIAlbumSlot>(m_GridOfAlbum.transform);
             slot.UpdateUI(i + 2, "My Black Flame Dragon...");
@@ -88,7 +88,7 @@ public class UIAlbum : UIBase
         Common.DisposeList(m_ListOfAlbumSlot);
         Common.DisposeList(m_ListOfPictureSlot);
 
-        for (int i = 0; i < 2; i++)
+        for (int i = 1; i <= 2; i++)
         {
             var slot = PoolingManager.Instance.Pop<UIAlbumSlot>(m_GridOfPicture.transform);
             slot.UpdateUI(i, "Wa~" + i);
