@@ -10,6 +10,13 @@ public class ResourceManager : SingletonBase<ResourceManager>
     // 스프라이트 딕셔너리.
     private Dictionary<string, Sprite> m_DicSprite = new Dictionary<string, Sprite>();
 
+    public override void InitManager()
+    {
+        base.InitManager();
+        LoadAllSprite("Image/Pictures");
+        LoadAllSprite("Image/Albums");
+    }
+
     public T Load<T>(string path) where T : Object
     {
         T tobj = Resources.Load<T>(path);
@@ -100,6 +107,20 @@ public class ResourceManager : SingletonBase<ResourceManager>
                 m_DicSprite.Add(sprite[i].name, sprite[i]);
             }
         }
+    }
+
+    // 스프라이트 반환.
+    public Sprite GetSprite(string path, string spriteID)
+    {
+        Sprite tex;
+        if (m_DicSprite.TryGetValue(spriteID, out tex))
+        {
+            return tex;
+        }
+
+        Debug.LogError(spriteID);
+        return null;
+
     }
 
     // 스프라이트 반환.

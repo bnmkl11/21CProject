@@ -19,6 +19,8 @@ public class Common
     public const string kPREFAB_SCENE_LOADING = "Prefabs/UI/Scene/UILoading";
     public const string kPREFAB_POPUP_ALBUM     = "Prefabs/UI/Popup/UIAlbum";
 
+    public const string kPREFAB_POPUP_ALBUM_SLOT = "Prefabs/UI/Album/UIAlbumSlot";
+
     public const string kPREFAB_INGAME_NPC = "Prefabs/UI/Appraise/UINpc";
     public const string kPREFAB_INGAME_APPRAISETOOL = "Prefabs/UI/Appraise/UIAppraiseTool";
     public const string kPREFAB_APPRAISE_PROFILEPOPUP = "Prefabs/UI/Appraise/UIProfilePopup";
@@ -59,6 +61,19 @@ public class Common
                 break;
 
         }
+    }
+
+    static public void DisposeList<T>(List<T> list) where T : PoolingObjectBase
+    {
+        if (list.Count == 0)
+            return;
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            list[i].DisposeObject();
+        }
+
+        list.Clear();
     }
 
     /// <summary>

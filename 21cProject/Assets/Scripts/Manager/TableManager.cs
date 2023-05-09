@@ -5,15 +5,15 @@ using SimpleJSON;
 
 public class TableManager : SingletonBase<TableManager>
 {
+	public List<AlbumData> m_ListOfAlbum;
+
+
     public override void InitManager()
     {
         base.InitManager();
 
-		var list = LoadJson<UIData>("Scripts/Test");
-		list.ForEach(data =>
-		{
-			Debug.Log(data.NAME);
-		});
+		m_ListOfAlbum = LoadJson<AlbumData>("Scripts/Album");
+		
 	}
 
 

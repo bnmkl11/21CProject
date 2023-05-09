@@ -19,6 +19,7 @@ public class UIItemSlot : PoolingObjectBase
     public override void DisposeObject()
     {
         base.DisposeObject();
+        PoolingManager.Instance.Push(this);
     }
 
     public override void UpdateObject()
