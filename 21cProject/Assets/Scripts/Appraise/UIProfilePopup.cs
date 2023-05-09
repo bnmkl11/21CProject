@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIProfilePopup : MonoBehaviour
+public class UIProfilePopup : PoolingObjectBase
 {
     [SerializeField] 
     private TextMeshProUGUI m_TextOfName;
@@ -32,6 +32,15 @@ public class UIProfilePopup : MonoBehaviour
 
     private ProfileData m_ProfileData;
 
+    public override void Initialize()
+    {
+        //UIManager.Instance.GetUI<Button>().
+    }
+
+    public override void UpdateObject()
+    {
+    }
+
     public void UpdatePopup(ProfileData data)
     {
         m_ProfileData = data;
@@ -52,5 +61,10 @@ public class UIProfilePopup : MonoBehaviour
         {
             m_ListOfCrimialHistory[i].text = m_ProfileData.CRIMINALHISTORY[i];
         }
+    }
+
+    public void OnTouchExit()
+    {
+        base.DisposeObject();
     }
 }

@@ -1,6 +1,11 @@
-// Create By 23.04.13 JONGCHAN PARK
+//
+// Created on Sun Mar 07 2023
+//
+// Copyright (c) 2023 JONGCHAN PARK
+//
 
 using System;
+using System.Collections.Generic;
 
 public class UIAppraise : UIBase
 {
@@ -12,6 +17,10 @@ public class UIAppraise : UIBase
     }
 
     private AppraisePhaseState m_CurrentAppraisingState = AppraisePhaseState.Appraising;
+
+    private List<UIAppraiseBaseTool> m_ListOfAppraiseTool;
+
+    private ToolData.kTOOL_TYPE m_CurrentTool;
 
     #region Override
 
@@ -37,6 +46,11 @@ public class UIAppraise : UIBase
             case AppraisePhaseState.AppraisingEnd:
                 break;
         }
+    }
+
+    public void UpdateAppraiseTool(ToolData.kTOOL_TYPE toolType)
+    {
+        m_CurrentTool = toolType;
     }
 
     #endregion

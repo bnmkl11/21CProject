@@ -13,7 +13,15 @@ public class UIAppraiseBaseTool : PoolingObjectBase
 
     public override void Initialize()
     {
-        
+        Common.AddUIEvent(gameObject, (pointer) =>
+        {
+            (UIManager.Instance.GetUI<UIAppraise>() as UIAppraise).UpdateAppraiseTool(m_ToolData.TOOLTYPE);
+        }, kUIEVENT.BeginDarg);
+
+        Common.AddUIEvent(gameObject, (pointer) =>
+        {
+            gameObject.transform.localPosition = pointer.position;
+        }, kUIEVENT.Drag);
     }
 
     public override void UpdateObject()
