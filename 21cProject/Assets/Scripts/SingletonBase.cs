@@ -45,7 +45,7 @@ public abstract class SingletonBase<T> : MonoBehaviour where T : SingletonBase<T
     /// </summary>
     public virtual void InitManager()
     {
-        Debug.Log(typeof(T).ToString() + " 초기화 성공");
+        //Debug.Log(typeof(T).ToString() + " 초기화 성공");
     }
 
     private void Awake()

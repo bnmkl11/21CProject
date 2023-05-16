@@ -8,7 +8,7 @@ public class LoadingMain : SceneMain
 
     public override void OnInitializeScene()
     {
-        Debug.Log("dd");
+        //Debug.Log("dd");
         UIManager.Instance.Push<UILoading>(Common.kPREFAB_SCENE_LOADING);
     }
 

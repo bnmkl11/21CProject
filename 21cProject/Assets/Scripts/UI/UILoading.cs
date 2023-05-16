@@ -35,7 +35,7 @@ public class UILoading : UIBase
 
     private void UpdatePertage(float percentage)
     {
-        Debug.Log("[Load]" + percentage * 100 + "%...");
+        //Debug.Log("[Load]" + percentage * 100 + "%...");
     }
 
 }

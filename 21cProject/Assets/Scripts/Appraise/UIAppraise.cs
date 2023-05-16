@@ -6,8 +6,9 @@
 
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class UIAppraise : UIBase
+public class UIAppraise : MonoBehaviour
 {
     public enum AppraisePhaseState
     {
@@ -21,15 +22,6 @@ public class UIAppraise : UIBase
     private List<UIAppraiseBaseTool> m_ListOfAppraiseTool;
 
     private ToolData.kTOOL_TYPE m_CurrentTool;
-
-    #region Override
-
-    public override void Initialize()
-    {
-        base.Initialize();
-    }
-
-    #endregion
 
     #region Update
 

@@ -27,7 +27,7 @@ public class SoundManager : SingletonBase<SoundManager>
             string soundName = bgms[i].name;
             kBGM bgm = (kBGM)Enum.Parse(typeof(kBGM), soundName);
 #if UNITY_EDITOR
-            Debug.Log(bgms[i].name + "Load Success");
+            //Debug.Log(bgms[i].name + "Load Success");
 #endif
             m_DicBGM.Add(bgm, bgms[i]);
         }
@@ -39,7 +39,7 @@ public class SoundManager : SingletonBase<SoundManager>
             string soundName = sounds[i].name;
             kSFX sfx = (kSFX)Enum.Parse(typeof(kSFX), soundName);
 #if UNITY_EDITOR
-            Debug.Log(sounds[i].name + "Load Success");
+            //Debug.Log(sounds[i].name + "Load Success");
 #endif
             m_DicSound.Add(sfx, sounds[i]);
         }

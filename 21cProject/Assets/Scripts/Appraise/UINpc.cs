@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UINpc : PoolingObjectBase
+public class UINpc : PoolingObjectBase, IPointerUpHandler
 {
     [SerializeField]
     private Image m_ImageOfNpc;
@@ -22,13 +23,13 @@ public class UINpc : PoolingObjectBase
     
     public override void Initialize()
     {
-        Common.AddUIEvent(gameObject, (pointer) =>
-        {
-            if ((UIManager.Instance.GetUI<UIAppraise>() as UIAppraise).GetCurrentTool() != ToolData.kTOOL_TYPE.None)
-            {
-                Speak();
-            }
-        }, kUIEVENT.Drag);
+        //Common.AddUIEvent(gameObject, (pointer) =>
+        //{
+        //    if ((UIManager.Instance.GetUI<UIAppraise>() as UIAppraise).GetCurrentTool() != ToolData.kTOOL_TYPE.None)
+        //    {
+        //        Speak();
+        //    }
+        //}, kUIEVENT.Drag);
     }
 
     public override void UpdateObject()
@@ -57,6 +58,17 @@ public class UINpc : PoolingObjectBase
         m_RootOfScript.SetActive(true);
         // TODO::나중에 테이블에서 가져오기
         m_TextOfScript.text = "응애";
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        print("으응앵");
+        var appraise = GameObject.FindGameObjectWithTag("Appraise").GetComponent<UIAppraise>();
+
+        if (appraise.GetCurrentTool() != ToolData.kTOOL_TYPE.None)
+        {
+            Speak();
+        }
     }
 
     #endregion

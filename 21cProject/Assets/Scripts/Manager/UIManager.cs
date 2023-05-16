@@ -319,7 +319,7 @@ public class UIManager : SingletonBase<UIManager>
             uiBase.Show();
             uiBase.UpdateObject();
 
-            Debug.LogError("Create UI ::" + typeof(T).ToString());
+            //Debug.LogError("Create UI ::" + typeof(T).ToString());
             m_DicOfUI.Add(typeof(T), uiBase);
 
             return uiBase;

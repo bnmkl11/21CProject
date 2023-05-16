@@ -21,7 +21,7 @@ public class SceneChanger : SingletonBase<SceneChanger>
 
     public override void InitManager()
     {
-        Debug.Log(gameObject.name + "Initialize Success!!");
+        //Debug.Log(gameObject.name + "Initialize Success!!");
         return;
     }
 
@@ -59,7 +59,7 @@ public class SceneChanger : SingletonBase<SceneChanger>
     {
         yield return null;
 
-        Debug.Log(sceneType.ToString() + " Try to loading Scene");
+        //Debug.Log(sceneType.ToString() + " Try to loading Scene");
 
         string sceneName = sceneType.ToString();
         AsyncOperation Op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
@@ -69,7 +69,7 @@ public class SceneChanger : SingletonBase<SceneChanger>
         {
             yield return null;
 
-            Debug.Log(sceneName.ToString() + " Loading...");
+            //Debug.Log(sceneName.ToString() + " Loading...");
             if (Op.progress >= 0.9f)
             {
                 m_CurrentSceneType = sceneType;

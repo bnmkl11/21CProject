@@ -35,7 +35,7 @@ public class PoolingManager : SingletonBase<PoolingManager>
         newPool.InitializePool<T>(startCount, tobj);
         m_DicOfPool.Add(typeof(T).ToString(), newPool);
 
-        Debug.Log(typeof(T).ToString() + "积己 肯丰.");
+        //Debug.Log(typeof(T).ToString() + "积己 肯丰.");
     }
 
     /// <summary>

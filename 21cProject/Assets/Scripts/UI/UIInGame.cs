@@ -25,7 +25,7 @@ public class UIInGame : UIBase
     private void InitPool()
     {
         PoolingManager.Instance.CreatePool<UIAppraiseBaseTool>(Common.kPREFAB_INGAME_APPRAISETOOL);
-        PoolingManager.Instance.CreatePool<UIAppraiseBaseTool>(Common.kPREFAB_INGAME_NPC);
+        PoolingManager.Instance.CreatePool<UINpc>(Common.kPREFAB_INGAME_NPC);
     }
 
     #endregion

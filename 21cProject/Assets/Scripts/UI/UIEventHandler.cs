@@ -19,6 +19,7 @@ public class UIEventHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        print("ev begindrag");
         BeginDragAction?.Invoke(eventData);
     }
 

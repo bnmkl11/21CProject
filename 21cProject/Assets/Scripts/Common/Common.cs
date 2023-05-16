@@ -36,30 +36,18 @@ public class Common
     static public void AddUIEvent(GameObject gameObject, System.Action<PointerEventData> action, kUIEVENT type)
     {
         UIEventHandler ev = Common.GetOrAddComponent<UIEventHandler>(gameObject);
+        Debug.Log("creat ev");
 
         if (ev == null) return;
-
+        Debug.Log("not null");
         switch (type)
         {
-            case kUIEVENT.Click:
-                ev.ClickAction = action;
-                break;
-            case kUIEVENT.Down:
-                ev.DownAction = action;
-                break;
-            case kUIEVENT.Up:
-                ev.UpAction = action;
-                break;
-            case kUIEVENT.BeginDarg:
-                ev.BeginDragAction = action;
-                break;
-            case kUIEVENT.Drag:
-                ev.OnDragAction = action;
-                break;
-            case kUIEVENT.ExitDrag:
-                ev.ExitDragAction = action;
-                break;
-
+            case kUIEVENT.Click:        ev.ClickAction = action;        break;
+            case kUIEVENT.Down:         ev.DownAction = action;         break;
+            case kUIEVENT.Up:           ev.UpAction = action;           break;
+            case kUIEVENT.BeginDarg:    ev.BeginDragAction = action;    break;
+            case kUIEVENT.Drag:         ev.OnDragAction = action;       break;
+            case kUIEVENT.ExitDrag:     ev.ExitDragAction = action;     break;
         }
     }
 
@@ -87,7 +75,7 @@ public class Common
         {
             return obj;
         }
-
+        
         return gameObject.AddComponent<T>();
     }
 
