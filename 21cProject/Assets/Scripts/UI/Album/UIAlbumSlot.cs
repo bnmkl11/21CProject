@@ -12,6 +12,8 @@ public class UIAlbumSlot : PoolingObjectBase
     [SerializeField]
     private TMPro.TextMeshProUGUI m_Text;
 
+    private int m_Index;
+
 
     public override void DisposeObject()
     {
@@ -31,6 +33,7 @@ public class UIAlbumSlot : PoolingObjectBase
 
     public void UpdateUI(int index, string text)
     {
+        m_Index = index;
         var sprite = ResourceManager.Instance.GetSprite(index.ToString());
 
         m_SpriteOfAlbum.sprite = sprite;
@@ -39,6 +42,8 @@ public class UIAlbumSlot : PoolingObjectBase
 
     public void OnTouch()
     {
-
+        UIManager.Instance.Push<UIAlbumPopup>(Common.kPREFAB_POPUP_ALBUM_POPUP);
+        var popup = UIManager.Instance.GetUI<UIAlbumPopup>();
+        popup.UpdateUI(m_Index, "@@", "&&&");
     }
 }

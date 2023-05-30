@@ -17,8 +17,7 @@ public class UIBase : PoolingObjectBase
     public bool IsMainScene{ get => m_IsMainScene; }
 
 
-    private int m_OrderLayer;
-    public int OrderLayer { get => m_OrderLayer; }
+    public int OrderLayer { get => m_Canvas.sortingOrder; }
 
     private Canvas m_Canvas;
 
@@ -51,14 +50,6 @@ public class UIBase : PoolingObjectBase
     private void Awake()
     {
         m_Canvas = GetComponent<Canvas>();
-        if (m_Canvas)
-        {
-            m_OrderLayer = GetComponent<Canvas>().sortingOrder;
-        }
-        else
-        {
-            m_OrderLayer = 0;
-        }
     }
 
     /// <summary>

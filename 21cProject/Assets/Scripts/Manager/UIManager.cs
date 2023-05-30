@@ -231,12 +231,12 @@ public class UIManager : SingletonBase<UIManager>
     /// <summary>
     /// UI 가져오기.
     /// </summary>
-    public UIBase GetUI<T>() where T : UIBase
+    public T GetUI<T>() where T : UIBase
     {
         UIBase resultUI = null;
         if (m_DicOfUI.TryGetValue(typeof(T), out resultUI))
         {
-            return resultUI;
+            return resultUI as T;
         }
 
         return null;

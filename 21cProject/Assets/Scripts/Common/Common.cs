@@ -18,6 +18,7 @@ public class Common
     public const string kPREFAB_SCENE_IN_GAME = "Prefabs/UI/Scene/UIInGame";
     public const string kPREFAB_SCENE_LOADING = "Prefabs/UI/Scene/UILoading";
     public const string kPREFAB_POPUP_ALBUM     = "Prefabs/UI/Popup/UIAlbum";
+    public const string kPREFAB_POPUP_ALBUM_POPUP = "Prefabs/UI/Album/UIAlbumPopup";
 
     public const string kPREFAB_POPUP_ALBUM_SLOT = "Prefabs/UI/Album/UIAlbumSlot";
 
@@ -36,18 +37,30 @@ public class Common
     static public void AddUIEvent(GameObject gameObject, System.Action<PointerEventData> action, kUIEVENT type)
     {
         UIEventHandler ev = Common.GetOrAddComponent<UIEventHandler>(gameObject);
-        Debug.Log("creat ev");
 
         if (ev == null) return;
-        Debug.Log("not null");
+
         switch (type)
         {
-            case kUIEVENT.Click:        ev.ClickAction = action;        break;
-            case kUIEVENT.Down:         ev.DownAction = action;         break;
-            case kUIEVENT.Up:           ev.UpAction = action;           break;
-            case kUIEVENT.BeginDarg:    ev.BeginDragAction = action;    break;
-            case kUIEVENT.Drag:         ev.OnDragAction = action;       break;
-            case kUIEVENT.ExitDrag:     ev.ExitDragAction = action;     break;
+            case kUIEVENT.Click:
+                ev.ClickAction = action;
+                break;
+            case kUIEVENT.Down:
+                ev.DownAction = action;
+                break;
+            case kUIEVENT.Up:
+                ev.UpAction = action;
+                break;
+            case kUIEVENT.BeginDarg:
+                ev.BeginDragAction = action;
+                break;
+            case kUIEVENT.Drag:
+                ev.OnDragAction = action;
+                break;
+            case kUIEVENT.ExitDrag:
+                ev.ExitDragAction = action;
+                break;
+
         }
     }
 
@@ -75,7 +88,7 @@ public class Common
         {
             return obj;
         }
-        
+
         return gameObject.AddComponent<T>();
     }
 

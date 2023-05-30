@@ -98,6 +98,12 @@ public class UIAlbum : UIBase
         }
     }
 
+    public void OnTouchExit()
+    {
+        UIManager.Instance.Pop<UIAlbum>();
+        UIManager.Instance.Show<UITitle>();
+    }
+
     public void OnTouchNone()
     {
         m_RootOfAlbum.SetActive(false);

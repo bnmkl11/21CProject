@@ -1396,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5780327085369289154, guid: c61a99162ff1c7f48b49305833d4a491, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnTouchNone
+      value: OnTouchExit
       objectReference: {fileID: 0}
     - target: {fileID: 5780327085369289154, guid: c61a99162ff1c7f48b49305833d4a491, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
