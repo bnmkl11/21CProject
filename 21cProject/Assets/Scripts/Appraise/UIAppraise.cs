@@ -51,7 +51,7 @@ public class UIAppraise : MonoBehaviour
 
     public ToolData.kTOOL_TYPE GetCurrentTool()
     { 
-        return m_CurrentTool; 
+        return m_CurrentTool;
     }
 
     #endregion

@@ -302,7 +302,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7147310186420201859}
   - component: {fileID: 7129590351261919229}
-  - component: {fileID: 38295885791609696}
   m_Layer: 5
   m_Name: UINPC
   m_TagString: Untagged
@@ -347,14 +346,3 @@ MonoBehaviour:
   m_ImageOfNpc: {fileID: 8137744309862125147}
   m_RootOfScript: {fileID: 5650165929632437315}
   m_TextOfScript: {fileID: 8594134215944563794}
---- !u!210 &38295885791609696
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6390701263679100595}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
