@@ -55,13 +55,13 @@ public class UIAlbum : UIBase
         Common.DisposeList(m_ListOfAlbumSlot);
         Common.DisposeList(m_ListOfPictureSlot);
 
+        PoolingManager.Instance.CreatePool<UIAlbumSlot>(Common.kPREFAB_POPUP_ALBUM_SLOT);
+
         var buttonObject = GetButton("ButtonAlbum");
         buttonObject.onClick.AddListener(OnTouchAlbum);
 
         buttonObject = GetButton("ButtonPicture");
         buttonObject.onClick.AddListener(OnTouchPicture);
-
-        PoolingManager.Instance.CreatePool<UIAlbumSlot>(Common.kPREFAB_POPUP_ALBUM_SLOT);
 
         OnTouchNone();
     }
