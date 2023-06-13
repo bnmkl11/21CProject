@@ -89,7 +89,7 @@ public class ObjectPool : MonoBehaviour
 
         m_QActiveObject.Enqueue(po);
         po.IsInPool = true;
-
+        
         po.transform.SetParent(transform);
 
         if (po.gameObject.activeSelf)

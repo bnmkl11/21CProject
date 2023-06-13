@@ -5,15 +5,35 @@ using SimpleJSON;
 
 public class TableManager : SingletonBase<TableManager>
 {
-	public List<AlbumData> m_ListOfAlbum;
+	private List<AlbumData> m_ListOfAlbum;
+
+	public List<AlbumData> ListOfAlbum
+	{
+		get => m_ListOfAlbum;
+	}
+
+	private List<CharacterData> m_ListOfCharacter;
+
+	public List<CharacterData> ListOfCharacter
+    {
+		get => m_ListOfCharacter;
+    }
+
+	private List<ItemData> m_ListOfItem;
+
+	public List<ItemData> ListOfItem
+	{
+		get => m_ListOfItem;
+	}
 
 
-    public override void InitManager()
+	public override void InitManager()
     {
         base.InitManager();
 
-		m_ListOfAlbum = LoadJson<AlbumData>("Scripts/Album");
-		
+		m_ListOfAlbum		= LoadJson<AlbumData>("Scripts/Album");
+		m_ListOfCharacter	= LoadJson<CharacterData>("Scripts/Character");
+		m_ListOfItem		= LoadJson<ItemData>("Scripts/Item");
 	}
 
 
